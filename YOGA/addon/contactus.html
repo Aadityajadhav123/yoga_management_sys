@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Fujifilm Instax Contact us form</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900|Pacifico" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+<style>
+  .contact-wrap {
+    padding: 40px 0;
+    font-family: 'nunito sans';
+    background:url("https://www.toptal.com/designers/subtlepatterns/patterns/brickwall.png") repeat;
+  }
+  
+  .contact-wrap .contact-details {
+    background:#a4eba8; /*e97a7f*/ /*a4eba8*/
+    color:#5f5f5f;
+    padding:30px 25px 10px;
+    margin-bottom: 40px;
+  }
+  
+  .contact-wrap .contact-details h2 {
+    text-transform:capitalize;
+    margin: 0 ;
+    font: normal 35px 'pacifico';
+    color:#333;
+  }
+  
+  .contact-wrap .contact-other i, .contact-wrap .contact-other a{
+    display: inline-block;
+    margin-right: 10px;
+    color:#a23047;
+  }
+  
+  .contact-wrap .contact-other.img {
+    text-align: center;
+  }
+  
+  .contact-wrap .contact-other.img img{
+    max-width:55%;
+  }
+  
+  .contact-wrap .contact-other p{
+    display: inline-block;
+    margin: 0 0 10px;
+    font-size:15px
+  }
+  
+  .contact-form button {
+    background: #ff4081;
+    border: none;
+    border-radius: 2px;
+    color: #fff;
+    height: 36px;
+    padding: 0px 15px;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 36px;
+    vertical-align: middle;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 20px;
+  }
+  
+  .contact-form button i {
+    color: #fff;
+  }
+  
+  .contact-form i {
+    color:#e97a7f;
+  }
+  
+  .contact-form button[disabled] {
+    background: #ddd;
+    color: #757575;
+  }
+  
+  #map {
+    width: 100%;
+    height: 400px;
+  }
+  
+  @media (max-width:600px) {
+    #map {height:200px;margin-bottom: 20px;}
+  }
+</style>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="contact-wrap">
+  <div class="container">
+    <div class="contact-form-map">
+      <div class="row">
+        <div class="col m6 push-m6 s12">
+          <div id="map"></div>
+        </div>
+        <div class="col m6 pull-m6 s12">
+          <form class="contact-form" autocomplete="off" method="get">
+            <div class="input-field">
+              <i class="material-icons prefix">person</i>
+              <input id="icon_prefix" type="text" class="validate">
+              <label for="icon_prefix" data-error="incomplete">Complete Name</label>
+            </div>
+
+            <div class="input-field">
+              <i class="material-icons prefix">email</i>
+              <input id="email" type="email" class="validate">
+              <label for="email" data-error="incorrect email address">Email</label>
+            </div>
+            
+            <div class="input-field">
+              <i class="material-icons prefix">mode_edit</i>
+              <textarea id="textarea" class="materialize-textarea"></textarea>
+              <label class="textarea-label" for="textarea" data-error="please write your message">Textarea</label>
+            </div>
+
+            <div class="input-wrap">
+              <input type="checkbox" id="d">
+              <label for="d">You agree on our terms and conditions</label>
+            </div>
+
+            <div class="input-wrap">
+              <button id="confirm" type="submit">Submit</button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js'></script>
+<script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAd1xMYT1bt99qtFWQEzXiRBvORDWHgPtk&libraries=places'></script>
+
+<script>
+  $('#d').change(enableBtn);
+$('.input').blur(enableBtn);
+
+function enableBtn() {
+  if ($('#d').is(':checked') == false || $('.input-field').parent('.input-wrap').hasClass('invalid') == true || $('.input').val().length < 2) {
+    $("#confirm").prop("enabled", true);
+  } else {
+    $("#confirm").prop("enabled", false);
+  }
+}
+enableBtn();
+
+
+google.maps.event.addDomListener(window, 'load', init);
+function init() {
+  var mapOptions = {
+    // How zoomed in you want the map to start at (always required)
+    zoom: 11,
+    // The latitude and longitude to center the map (always required)
+    center: new google.maps.LatLng(40.6700, -73.9400), // New York
+
+    // How you would like to style the map. 
+    // This is where you would paste any style found on Snazzy Maps.
+    styles: [{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#53608f"}]},{"featureType":"administrative.country","elementType":"geometry.stroke","stylers":[{"saturation":"22"},{"lightness":"48"}]},{"featureType":"administrative.neighborhood","elementType":"labels.text.fill","stylers":[{"color":"#53608f"},{"lightness":"24"}]},{"featureType":"landscape","elementType":"labels.text.fill","stylers":[{"color":"#53608f"}]},{"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"color":"#e9ecf5"}]},{"featureType":"landscape.man_made","elementType":"geometry.stroke","stylers":[{"color":"#edeff3"},{"lightness":"-6"}]},{"featureType":"poi","elementType":"all","stylers":[{"saturation":"32"},{"color":"#e3e5ed"}]},{"featureType":"poi","elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"}]},{"featureType":"poi.attraction","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi.business","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi.government","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi.medical","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"color":"#c8eed8"}]},{"featureType":"poi.park","elementType":"labels.text.fill","stylers":[{"color":"#919ab7"}]},{"featureType":"poi.place_of_worship","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi.school","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi.sports_complex","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"visibility":"on"},{"saturation":"-11"}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"visibility":"on"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"saturation":"0"},{"lightness":"0"},{"color":"#919ab7"}]},{"featureType":"road","elementType":"labels.icon","stylers":[{"saturation":"-24"},{"visibility":"on"},{"hue":"#e9ff00"},{"lightness":"16"}]},{"featureType":"road.highway","elementType":"all","stylers":[{"saturation":"0"},{"lightness":"0"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffede4"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#ffa681"}]},{"featureType":"road.highway","elementType":"labels.icon","stylers":[{"saturation":"55"},{"lightness":"0"},{"weight":"1"}]},{"featureType":"road.highway.controlled_access","elementType":"all","stylers":[{"visibility":"on"},{"saturation":"0"},{"lightness":"16"}]},{"featureType":"road.highway.controlled_access","elementType":"geometry.fill","stylers":[{"color":"#ffceb6"}]},{"featureType":"road.highway.controlled_access","elementType":"geometry.stroke","stylers":[{"color":"#ffa681"}]},{"featureType":"road.highway.controlled_access","elementType":"labels.icon","stylers":[{"visibility":"on"},{"lightness":"0"},{"saturation":"-17"},{"hue":"#5c00ff"},{"weight":"1.00"},{"gamma":"1.00"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"road.local","elementType":"geometry.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"transit.station","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"saturation":"20"},{"hue":"#6100ff"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#e4e5ff"},{"visibility":"on"}]},{"featureType":"water","elementType":"geometry.fill","stylers":[{"color":"#bee8ff"}]},{"featureType":"water","elementType":"labels.text.fill","stylers":[{"color":"#7ba8ff"},{"visibility":"off"}]}]
+  };
+  // Get the HTML DOM element that will contain your map 
+  // We are using a div with id="map" seen below in the <body>
+  var mapElement = document.getElementById('map');
+  // Create the Google Map using our element and options defined above
+  var map = new google.maps.Map(mapElement, mapOptions);
+  // Let's also add a marker while we're at it
+  var marker = new google.maps.Marker({
+    position: new google.maps.LatLng(40.6700, -73.9400),
+    map: map,
+    title: 'Fujifilm Philippines'
+  });
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<style type="text/css">
+	/***********************************************/
+/***************** Accordion ********************/
+/***********************************************/
+@import url('https://fonts.googleapis.com/css?family=Tajawal');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+section{
+	padding: 60px 0;
+}
+
+#accordion-style-1 h1,
+#accordion-style-1 a{
+    color:black;
+}
+#accordion-style-1 .btn-link {
+    font-weight: 400;
+    color: orange;
+    background-color: transparent;
+    text-decoration: none !important;
+    font-size: 16px;
+    font-weight: bold;
+	padding-left: 25px;
+}
+
+#accordion-style-1 .card-body {
+    border-top: 2px solid orange;
+}
+
+#accordion-style-1 .card-header .btn.collapsed .fa.main{
+	display:none;
+}
+
+#accordion-style-1 .card-header .btn .fa.main{
+	background: orange;
+    padding: 13px 11px;
+    color: #ffffff;
+    width: 35px;
+    height: 41px;
+    position: absolute;
+    left: -1px;
+    top: 10px;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+	display:block;
+}
+</style>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<!-- Accordion -->
+<div class="container-fluid bg-gray" id="accordion-style-1">
+	<div class="container">
+		<section>
+			<div class="row">
+				<div class="col-12">
+					<h1 class="text-green mb-4 text-center">Frequently Asked Questions</h1>
+				</div>
+				<div class="col-10 mx-auto">
+					<div class="accordion" id="accordionExample">
+						<div class="card">
+							<div class="card-header" id="headingOne">
+								<h5 class="mb-0">
+							<button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+							  <i class="fa fa-plus main"></i><i class="fa fa-angle-double-right mr-3"></i>What is yoga?
+							</button>
+						  </h5>
+							</div>
+
+							<div id="collapseOne" class="collapse show fade" aria-labelledby="headingOne" data-parent="#accordionExample">
+								<div class="card-body">
+									In very simple terms, yoga is a system for bringing balance into your body and mind. It involves the physical practice of yoga postures called asanas, and breathing exercises called pranayama. Yoga also includes meditation, self-enquiry and the study of yoga philosophy. 
+
+‘Yoga’ in the Western world tends to focus mostly on the physical asana practice – the yoga poses. This is a great place to start but there is so much more to discover as you develop your yoga practice.
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-header" id="headingTwo">
+								<h5 class="mb-0">
+							<button class="btn btn-link collapsed btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+							 <i class="fa fa-plus main"></i><i class="fa fa-angle-double-right mr-3"></i>I’m a yoga beginner – which style should I start with?
+							</button>
+						  </h5>
+							</div>
+							<div id="collapseTwo" class="collapse fade" aria-labelledby="headingTwo" data-parent="#accordionExample">
+								<div class="card-body">
+									Hatha yoga is one of the main forms of yoga and many other yoga styles derive from it, so it’s a great place to learn the foundations and names of the poses. My Yoga for Beginners course takes you through the basics and is based on Hatha Yoga. You’ll learn how to move and flow with the breath, which will prepare you for other styles of yoga including Vinyasa flow and Ashtanga. These are often more energetic and strong so are good for people looking for a physical challenge. More relaxing forms of yoga include Yin yoga and Restorative.  
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-header" id="headingThree">
+								<h5 class="mb-0">
+							<button class="btn btn-link collapsed btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+							  <i class="fa fa-plus main"></i><i class="fa fa-angle-double-right mr-3"></i>How do I know if I’m doing it right?
+							</button>
+						  </h5>
+							</div>
+							<div id="collapseThree" class="collapse fade" aria-labelledby="headingThree" data-parent="#accordionExample">
+								<div class="card-body">
+									If you’re practicing yoga at home without a teacher you might wonder if you’re doing the poses properly at first. It’s good to bear in mind from the beginning that our bodies and bone structures are all very different so there isn’t just one ‘right’ way to do a pose. It’s about finding out what works for our own bodies. 
+
+Developing this body awareness takes practice so follow beginners’ yoga classes at first for more in-depth extra instructions and variations offered. It’s always a good idea to go to a teacher in person as well as online yoga if you can.
+
+The main thing to know is that yoga is not meant to hurt – that goes for whether you’re at practicing yoga at home on your own or in a class with a teacher. You will probably experience different sensations than you’re used to, and you may feel your muscles working, but if you feel any type of “warning” pain, such as sharpness or pinching, listen to your body and come slowly out of the pose. 
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-header" id="headingFour">
+								<h5 class="mb-0">
+							<button class="btn btn-link collapsed btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+							  <i class="fa fa-plus main"></i><i class="fa fa-angle-double-right mr-3"></i>What are the benefits of yoga?
+							</button>
+						  </h5>
+							</div>
+							<div id="collapseFour" class="collapse fade" aria-labelledby="headingFour" data-parent="#accordionExample">
+								<div class="card-body">
+									Practising yoga has loads of physical benefits: it creates a flexible, toned and strong body and improves breathing, energy and metabolism. Yoga improves circulatory and cardiac health, as well as fitness levels, pain and posture. It also has benefits for your mental health, making you happier, more balanced and emotionally calmer. It helps you relax so you can handle stress better. Yoga encourages self-confidence and helps you to focus your energy. 
+
+The spiritual benefits of yoga are also key: Yoga teaches you to be aware of what is going on inside and outside of you. Yoga teaches you to be present in your surroundings and open to what is all around – in other words, more mindful.
+
+You will feel some benefits immediately, such as the release of physical tension, the body opening and muscles strengthening – the “feel good” factor that keeps people hooked on yoga. Other benefits depend on how much you practice and every person is different. But most people will feel a positive change after a few weeks, if not before.
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-header" id="headingFive">
+								<h5 class="mb-0">
+							<button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseFive">
+							  <i class="fa fa-plus main"></i><i class="fa fa-angle-double-right mr-3"></i>Why should try yoga?
+							</button>
+						  </h5>
+							</div>
+
+							<div id="collapseOne" class="collapse show fade" aria-labelledby="headingOne" data-parent="#accordionExample">
+								<div class="card-body">
+									In very simple terms, yoga is a system for bringing balance into your body and mind. It involves the physical practice of yoga postures called asanas, and breathing exercises called pranayama. Yoga also includes meditation, self-enquiry and the study of yoga philosophy. 
+
+‘Yoga’ in the Western world tends to focus mostly on the physical asana practice – the yoga poses. This is a great place to start but there is so much more to discover as you develop your yoga practice.
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</section>
+	</div>
+</div>
+<!-- .// Accordion -->
+</body>
+</html>

@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Packages</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <style>
+        .card-content {
+            box-sizing: border-box;
+            position: absolute;
+            display: none;
+            height: inherit;
+            width: 100%;
+            text-align: justify;
+        }
+        .card-container{
+        	height: 300px;
+        	width: 200px;
+        }
+        .card {
+            height: 100%;
+            position: relative;
+            transition: 1s;
+        }
+.card>img{
+	height: 180px;
+}        
+.card-body{
+	padding: 10px 20px;
+}
+        .card-container:hover .card {
+            transform: rotateY(180deg);
+        }
+        
+        .card-container:hover .card-content {
+            transform: rotateY(180deg);
+            display: block;
+        }
+        
+        .card-container:hover img,
+        .card-container:hover .card-body {
+            transform: rotateY(180deg);
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+<!--     <div class="container-fluid px-0 d-none">
+        <img src="banner.jpg" alt="banner" class="d-block" width="100%" height="400">
+    </div> -->
+    <div class="container my-3">
+        <h1 class="text-center">Packages</h1>
+    </div>
+    <div class="container py-3">
+        <div class="row mb-5">
+            <div class="col-sm-12 col-md-6 col-lg-4 card-container p-2">
+                <div class="card shadow">
+                    <img src="gym1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h2 class="card-title">GYM</h2>
+
+                    </div>
+                    <div class="card-content p-4">
+                        <p>
+                            A gymnasium,also known as a gym,is a covered location for athletics.The word is derived from the ancient Greek term "gymnasium".They are commonly found in athletic and fitness centres,and activity and learning space in educational institutions."Gym"is also slang for "fitness centre",which is often an area for indoor recreation.
+                        </p>
+                        <p class="text-center mt-5">
+                            <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#keralaModal">
+                                BOOK NOW
+                            </button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 card-container p-2">
+                <div class="card shadow">
+                    <img src="cardio.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h2 class="card-title">CARDIO </h2>
+
+                    </div>
+                    <div class="card-content p-4">
+                        <p>
+                            Cardio is defined as any type of exercise that gets your heart rate up and keeps it up for a prolonged period of time. Your respiratory system will start working harder as you begin to breathe faster and more deeply.When most people think of cardio exercises, the first activities that come to mind are running, cycling, or swimming.
+                        </p>
+                        <p class="text-center mt-5">
+                            <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#goaModal">
+                                BOOK NOW
+                        </button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 card-container p-2">
+                <div class="card shadow">
+                    <img src="Women's gym.jfif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h2 class="card-title">WOMEN'S GYM</h2>
+
+                    </div>
+                    <div class="card-content p-4">
+                        <p>
+                            Being part of a women-only gym means there are more equipment and classes catered toward women and the female body. While men generally prefer showing off at the handle free weights and gym machines, women enjoy group fitness classes that use the whole body and the mind.
+                        </p>
+                        <p class="text-center mt-5">
+                            <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#rajasthanModal">
+                                BOOK NOW
+                            </button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-4 card-container p-2">
+                <div class="card shadow">
+                    <img src="gym2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h2 class="card-title">POWERLIFTING GYM</h2>
+
+                    </div>
+                    <div class="card-content p-4">
+                        <p>
+                            Powerlifting is a strength sport that consists of three attempts at maximal weight on three lifts: squat, bench press, and deadlift. As in the sport of Olympic weightlifting, it involves the athlete attempting a maximal weight single-lift effort of a barbell loaded with weight plates.It's Helps to bulid strength and muscles.
+                        </p>
+                        <p class="text-center mt-5">
+                            <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#delhiModal">
+                                BOOK NOW
+                            </button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 card-container p-2">
+                <div class="card shadow">
+                    <img src="gym3.jfif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h2 class="card-title">CROSSFIT GYM </h2>
+
+                    </div>
+                    <div class="card-content p-4">
+                        <p>
+                            A form of high intensity interval training, CrossFit is a strength and conditioning workout that is made up of functional movement performed at a high intensity level.These movements are actions that you perform in your day-to-day life, like squatting, pulling, pushing etc.Help to build muscles.
+                        </p>
+                        <p class="text-center mt-5">
+                            <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#assamModal">
+                                BOOK NOW
+                            </button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 card-container p-2">
+                <div class="card shadow">
+                    <img src="gym4.JPG" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h2 class="card-title">PERSONAL TRAINING GYM</h2>
+
+                    </div>
+                    <div class="card-content p-4">
+                        <p>
+                            Personal training is a service provided by fitness professionals to help clients reach their fitness goals. Clients hire trainers for their knowledge and experience, and trainers usually provide one-on-one training on a short-term or long-term basis at locations including the gyms, community centers, and etc.
+                        </p>
+                        <p class="text-center mt-5">
+                            <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#maharashtraModal">
+                                BOOK NOW
+                            </button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 card-container p-2">
+                <div class="card shadow">
+                    <img src="gym5.jfif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h2 class="card-title">BOOT CAMP</h2>
+
+                    </div>
+                    <div class="card-content p-4">
+                        <p>
+                            Boot camps are exercise programs that are based on military training procedures and used as a means of fitness training. There are many different kinds of boot camps that are used just for fun, for discipline purposes and for training for different events.Some boot camps even focus on nutritional factors.
+                        </p>
+                        <p class="text-center mt-5">
+                            <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#andamanModal">
+                                BOOK NOW
+                            </button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 card-container p-2">
+                <div class="card shadow">
+                    <img src="zumba.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h2 class="card-title">ZUMBA CLASSES</h2>
+
+                    </div>
+                    <div class="card-content p-4">
+                        <p>
+                            Zumba combines high energy and motivating music with unique moves and combinations that allow the Zumba participants to dance away their worries. It is based on the principle that a workout should be "FUN AND EASY TO DO" allowing Zumba participants to stick to the Zumba Fitness program.
+                        </p>
+                        <p class="text-center mt-5">
+                            <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#madhyapradeshModal">
+                                BOOK NOW
+                            </button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 card-container p-2">
+                <div class="card shadow">
+                    <img src="gym6.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h2 class="card-title">Muscle strengthening</h2>
+
+                    </div>
+                    <div class="card-content p-4">
+                        <p>
+                            Muscular strength refers to the amount of force a muscle can produce with a single maximal effort. Muscular definition is the visual aspect when muscle shape is visible through the skin and underlying body fat.The size of your muscle fibers and the ability of nerves to activate muscle fibers are related to muscle strength.</p>
+                        </p>
+                        <p class="text-center mt-5">
+                            <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#himachalModal">
+                                BOOK NOW
+                            </button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- kerala Modal -->
+    <div class="modal fade" id="keralaModal">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">GYM<small class="ml-3">Only for gents</small></h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <table class="table table-striped">
+                        <tbody>
+                            <tr>
+                                <td>Purpose</td>
+                                <td>For weight Loss and Muscle gain</td>
+                            </tr>
+                            <tr>
+                                <td>Timing </td>
+                                <td>5:30am to 9:30am</td>
+                            </tr>
+                            <tr> 
+                                <td>Diet Plan Charge</td>
+                                <td>Rs.500</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h5>Package Itinerary</h5>
+                    <p>Legs: barbell back squats — 3 sets of 5 reps</p>
+                    <p>Chest: flat barbell bench press — 3 set of 5 reps</p>
+                    <p>Back: seated cable rows — 3 sets of 6–8 reps</p>
+                    <p>Shoulders: seated dumbbell shoulder press — 3 sets of 6–8 reps</p>
+                    <p>Triceps: cable rope triceps pushdowns — 3 sets of 8–10 reps</p>
+                    <p>Shoulders: lateral raises — 3 sets of 10–12 reps</p>
+                    <p>Calves: seated calf raises — 3 sets of 10–12 reps</p>
+                    <p>Abs: planks — 3 sets of 30-second holds</p>
+                    
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark" data-dismiss="modal">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- goa Modal -->
+    <div class="modal fade" id="goaModal">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">CARDIO<small class="ml-3">For both Ladies and Gents</small></h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <table class="table table-striped">
+                        <tbody>
+                            <tr>
+                                <td>Purpose</td>
+                                <td>Burns fat and calories</td>
+                            </tr>
+                            <tr>
+                                <td>Time limit for cardio</td>
+                                <td>Maximum 15 to 20 minute</td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                    <h5>Package Itinerary</h5>
+                    <p>
+                        Manage your weight: The Centers for Disease Control and Prevention (CDC)Trusted Source say there’s extensive scientific evidence that 150 minutes of moderate-intensity cardio per week will help you maintain your weight over time.</p>
+                       <p> Ward off heart disease: ResearchTrusted Source has shown that getting your heart rate up with regular cardio exercises can help prevent cardiovascular disease, which accounted for 31 percentTrusted Source of global deaths in 2012.</p>
+                        <p>Mood improvement: It’s probably no surprise to you, but research supports the role that cardio exercise plays in improving your mood and increasing your happiness. Cardio ups the production of those feel-good painkillers called endorphins.</p>
+                       <p> Live longer: The Mayo Clinic suggests that people who regularly perform cardio exercise will live longer./li>
+                    </p>
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark" data-dismiss="modal">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- rajasthan Modal -->
+    <div class="modal fade" id="rajasthanModal">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">WOMEN'S GYM <small class="ml-3">ONLY 18+ Ladies Allowed</small></h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <table class="table table-striped">
+                        <tbody>
+                            <tr>
+                                <td>Defination</td>
+                                <td>Women's fitness refers to the condition of optimum health of women.</td>
+                            </tr>
+                            <tr>
+                                <td>Timing</td>
+                                <td>10am to 1pm</td>
+                            </tr>
+                            <tr>
+                                <td>Diet Plan charges</td>
+                                <td>Rs.500</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h5>Package Itinerary</h5>
+                    <p>
+                    Calisthenics—
+                    A system of bodily exercises performed without equipment, such as push-ups and sit-ups.</p>
+                    <p>Folate—
+                    Also called folic acid; a B-complex vitamin required in the production of red blood cells.</p>
+                    <p>Hypertension—
+                    Abnormally high arterial blood pressure usually reflected by an adult systolic blood pressure of 140 mm Hg or higher, or a diastolic blood pressure of 90 mm Hg or higher.</p>
+                    <p>Osteoarthritis—
+                    A condition of deterioration of the bone and cartilage of joints, marked by pain, swelling, and stiffness in the joints and effecting predominantly older women.</p>
+                    <p>Osteoporosis—
+                    A condition, mostly effecting older women, wherein the bones decrease in mass and density.</p>
+                    <p>Trans fat—
+                    Any fat containing large amounts of unsaturated trans fatty acids and linked with high cholesterol.</p>
+                    <p>Sedentary—
+                    Lack of physical activity or long periods of sitting; linked to increased risk of heart disease.
+                    </p>
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark" data-dismiss="modal">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- delhi Modal -->
+    <div class="modal fade" id="delhiModal">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Power Lifing Gym<small class="ml-3">For  Both Ladies and Gents</small></h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <table class="table table-striped">
+                        <tbody>
+                            <tr>
+                                <td>Defination</td>
+                                <td>Power lifting to increase your
+                            </tr>
+                            <tr>
+                                <td>Timing</td>
+                                <td>10am to 1pm</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h5>Package Itinerary</h5>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam excepturi corporis dolor saepe autem minima assumenda praesentium consequatur magni suscipit! Exercitationem, vero neque! Blanditiis eius temporibus quae quisquam, consectetur libero. Lorem
+                        ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem consequuntur aliquam accusantium dolores rerum deleniti. Natus dolor itaque accusamus, consectetur cum aspernatur neque non atque velit nostrum odio impedit commodi?
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam excepturi corporis dolor saepe autem minima assumenda praesentium consequatur magni suscipit! Exercitationem, vero neque! Blanditiis eius temporibus quae quisquam,
+                        consectetur libero. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem consequuntur aliquam accusantium dolores rerum deleniti. Natus dolor itaque accusamus, consectetur cum aspernatur neque non atque velit nostrum
+                        odio impedit commodi?
+                    </p>
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark" data-dismiss="modal">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- assam Modal -->
+    <div class="modal fade" id="assamModal">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">ASSAM<small class="ml-3">(4 NIGHTS / 5 DAYS)</small></h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <table class="table table-striped">
+                        <tbody>
+                            <tr>
+                                <td>Hotels</td>
+                                <td>OYO Rooms,Treebo hotels, fab hotels and axis rooms</td>
+                            </tr>
+                            <tr>
+                                <td>Meals</td>
+                                <td>Breakfast and Dinner</td>
+                            </tr>
+                            <tr>
+                                <td>Discount</td>
+                                <td>20%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h5>Package Itinerary</h5>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam excepturi corporis dolor saepe autem minima assumenda praesentium consequatur magni suscipit! Exercitationem, vero neque! Blanditiis eius temporibus quae quisquam, consectetur libero. Lorem
+                        ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem consequuntur aliquam accusantium dolores rerum deleniti. Natus dolor itaque accusamus, consectetur cum aspernatur neque non atque velit nostrum odio impedit commodi?
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam excepturi corporis dolor saepe autem minima assumenda praesentium consequatur magni suscipit! Exercitationem, vero neque! Blanditiis eius temporibus quae quisquam,
+                        consectetur libero. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem consequuntur aliquam accusantium dolores rerum deleniti. Natus dolor itaque accusamus, consectetur cum aspernatur neque non atque velit nostrum
+                        odio impedit commodi?
+                    </p>
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark" data-dismiss="modal">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- maharashtra Modal -->
+    <div class="modal fade" id="maharashtraModal">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">MAHARASHTRA<small class="ml-3">(4 NIGHTS / 5 DAYS)</small></h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <table class="table table-striped">
+                        <tbody>
+                            <tr>
+                                <td>Hotels</td>
+                                <td>OYO Rooms,Treebo hotels, fab hotels and axis rooms</td>
+                            </tr>
+                            <tr>
+                                <td>Meals</td>
+                                <td>Breakfast and Dinner</td>
+                            </tr>
+                            <tr>
+                                <td>Discount</td>
+                                <td>20%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h5>Package Itinerary</h5>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam excepturi corporis dolor saepe autem minima assumenda praesentium consequatur magni suscipit! Exercitationem, vero neque! Blanditiis eius temporibus quae quisquam, consectetur libero. Lorem
+                        ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem consequuntur aliquam accusantium dolores rerum deleniti. Natus dolor itaque accusamus, consectetur cum aspernatur neque non atque velit nostrum odio impedit commodi?
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam excepturi corporis dolor saepe autem minima assumenda praesentium consequatur magni suscipit! Exercitationem, vero neque! Blanditiis eius temporibus quae quisquam,
+                        consectetur libero. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem consequuntur aliquam accusantium dolores rerum deleniti. Natus dolor itaque accusamus, consectetur cum aspernatur neque non atque velit nostrum
+                        odio impedit commodi?
+                    </p>
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark" data-dismiss="modal">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- andaman Modal -->
+    <div class="modal fade" id="andamanModal">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">ANDAMAN<small class="ml-3">(4 NIGHTS / 5 DAYS)</small></h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <table class="table table-striped">
+                        <tbody>
+                            <tr>
+                                <td>Hotels</td>
+                                <td>OYO Rooms,Treebo hotels, fab hotels and axis rooms</td>
+                            </tr>
+                            <tr>
+                                <td>Meals</td>
+                                <td>Breakfast and Dinner</td>
+                            </tr>
+                            <tr>
+                                <td>Discount</td>
+                                <td>20%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h5>Package Itinerary</h5>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam excepturi corporis dolor saepe autem minima assumenda praesentium consequatur magni suscipit! Exercitationem, vero neque! Blanditiis eius temporibus quae quisquam, consectetur libero. Lorem
+                        ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem consequuntur aliquam accusantium dolores rerum deleniti. Natus dolor itaque accusamus, consectetur cum aspernatur neque non atque velit nostrum odio impedit commodi?
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam excepturi corporis dolor saepe autem minima assumenda praesentium consequatur magni suscipit! Exercitationem, vero neque! Blanditiis eius temporibus quae quisquam,
+                        consectetur libero. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem consequuntur aliquam accusantium dolores rerum deleniti. Natus dolor itaque accusamus, consectetur cum aspernatur neque non atque velit nostrum
+                        odio impedit commodi?
+                    </p>
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark" data-dismiss="modal">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- madhyapradesh Modal -->
+    <div class="modal fade" id="madhyapradeshModal">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">MADHYA PRADESH<small class="ml-3">(4 NIGHTS / 5 DAYS)</small></h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <table class="table table-striped">
+                        <tbody>
+                            <tr>
+                                <td>Hotels</td>
+                                <td>OYO Rooms,Treebo hotels, fab hotels and axis rooms</td>
+                            </tr>
+                            <tr>
+                                <td>Meals</td>
+                                <td>Breakfast and Dinner</td>
+                            </tr>
+                            <tr>
+                                <td>Discount</td>
+                                <td>20%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h5>Package Itinerary</h5>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam excepturi corporis dolor saepe autem minima assumenda praesentium consequatur magni suscipit! Exercitationem, vero neque! Blanditiis eius temporibus quae quisquam, consectetur libero. Lorem
+                        ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem consequuntur aliquam accusantium dolores rerum deleniti. Natus dolor itaque accusamus, consectetur cum aspernatur neque non atque velit nostrum odio impedit commodi?
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam excepturi corporis dolor saepe autem minima assumenda praesentium consequatur magni suscipit! Exercitationem, vero neque! Blanditiis eius temporibus quae quisquam,
+                        consectetur libero. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem consequuntur aliquam accusantium dolores rerum deleniti. Natus dolor itaque accusamus, consectetur cum aspernatur neque non atque velit nostrum
+                        odio impedit commodi?
+                    </p>
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark" data-dismiss="modal">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- himachal Modal -->
+    <div class="modal fade" id="himachalModal">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">HIMACHAL<small class="ml-3">(4 NIGHTS / 5 DAYS)</small></h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <table class="table table-striped">
+                        <tbody>
+                            <tr>
+                                <td>Hotels</td>
+                                <td>OYO Rooms,Treebo hotels, fab hotels and axis rooms</td>
+                            </tr>
+                            <tr>
+                                <td>Meals</td>
+                                <td>Breakfast and Dinner</td>
+                            </tr>
+                            <tr>
+                                <td>Discount</td>
+                                <td>20%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h5>Package Itinerary</h5>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam excepturi corporis dolor saepe autem minima assumenda praesentium consequatur magni suscipit! Exercitationem, vero neque! Blanditiis eius temporibus quae quisquam, consectetur libero. Lorem
+                        ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem consequuntur aliquam accusantium dolores rerum deleniti. Natus dolor itaque accusamus, consectetur cum aspernatur neque non atque velit nostrum odio impedit commodi?
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam excepturi corporis dolor saepe autem minima assumenda praesentium consequatur magni suscipit! Exercitationem, vero neque! Blanditiis eius temporibus quae quisquam,
+                        consectetur libero. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem consequuntur aliquam accusantium dolores rerum deleniti. Natus dolor itaque accusamus, consectetur cum aspernatur neque non atque velit nostrum
+                        odio impedit commodi?
+                    </p>
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark" data-dismiss="modal">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
